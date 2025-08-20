@@ -21,7 +21,7 @@ npm install leafer-x-polyline-editor
 
 ```js
 import '@leafer-in/viewport';
-import { FreePolyline, FreePolylineEditor } from 'jd-canvas';
+import { FreePolyline, FreePolylineEditor } from 'leafer-x-polyline-editor';
 import { App } from 'leafer-ui';
 
 const app = new App({
@@ -69,7 +69,7 @@ FreePolylineEditor
 
 ```js
 import '@leafer-in/viewport';
-import { OrthoPolyline, OrthoPolylineEditor } from 'jd-canvas';
+import { OrthoPolyline, OrthoPolylineEditor } from 'leafer-x-polyline-editor';
 import { App } from 'leafer-ui';
 
 const app = new App({
