@@ -99,14 +99,6 @@ app.tree.add(element);
 | -- | -- | -- | -- |
 | 继承自 Arrow | [IArrowInputData](https://www.leaferjs.com/ui/api/interfaces/IArrowInputData.html) | \- | [Leafer Arrow](https://www.leaferjs.com/ui/plugin/in/arrow/) |
 
-OrthoPolylineEditor
-
-| 参数 | 类型 | 默认值 | 说明 |
-| -- | -- | -- | -- |
-| color | string | #1890FF | 编辑器颜色 |
-| strokeWidth | number | 2 | 编辑器线宽 |
-| ellipseWidth | number | 10 | 编辑器控制点大小 |
-
 #### 方法
 
 | 方法 | 参数 | 说明 |
