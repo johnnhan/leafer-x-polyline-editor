@@ -963,14 +963,14 @@ class PolylineEditor extends Group {
             this.selectItem = line;
             this.drawEditor();
         }
-        this.emit('line-select', {
+        this.emit('select', {
             oldValue,
             value: this.selectItem,
         });
     }
     cancel() {
         this.clearEditor();
-        this.emit('line-select', {
+        this.emit('select', {
             oldValue: this.selectItem,
             value: null,
         });
@@ -989,4 +989,4 @@ __decorate([
     createAttr(EDITOR_DEFAULT_ELLIPSE_WIDTH)
 ], PolylineEditor.prototype, "ellipseWidth", void 0);
 
-export { FreePolyline, OrthoPolyline, PolylineEditor, isHorizon, isOrthoLine, isVertical };
+export { FreePolyline, OrthoPolyline, PolylineEditor, isFreeLine, isHorizon, isOrthoLine, isVertical };

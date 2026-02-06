@@ -964,14 +964,14 @@ this.LeaferX.PolylineEditor = (function (exports, arrow, core) {
                 this.selectItem = line;
                 this.drawEditor();
             }
-            this.emit('line-select', {
+            this.emit('select', {
                 oldValue,
                 value: this.selectItem,
             });
         }
         cancel() {
             this.clearEditor();
-            this.emit('line-select', {
+            this.emit('select', {
                 oldValue: this.selectItem,
                 value: null,
             });
@@ -991,6 +991,7 @@ this.LeaferX.PolylineEditor = (function (exports, arrow, core) {
     ], PolylineEditor.prototype, "ellipseWidth", void 0);
 
     exports.PolylineEditor = PolylineEditor;
+    exports.isFreeLine = isFreeLine;
     exports.isHorizon = isHorizon;
     exports.isOrthoLine = isOrthoLine;
     exports.isVertical = isVertical;

@@ -33,11 +33,25 @@ npm install leafer-x-polyline-editor
 | drag-start | { target, current } | 拖拽折线开始事件 |
 | drag | { target, current } | 拖拽折线事件 |
 | drag-end | { target, current } | 拖拽折线结束事件 |
-| line-select | { oldValue, value } | 折线选中事件 |
+| select | { oldValue, value } | 折线选中事件 |
+
+#### 工具函数
+
+| 函数 | 参数 | 说明 |
+| -- | -- | -- |
+| isFreeLine | points：IPointData[] | 检查 points 是否能形成自由折线 |
+| isOrthoLine | points：IPointData[] | 检查 points 是否能形成正交折线 |
+| isHorizon | point1：IPointData, point2：IPointData | 检查两个点是否能形成水平线 |
+| isVertical | point1：IPointData, point2：IPointData | 检查两个点是否能形成垂直线 |
 
 #### 示例
 
 ```js
+import {
+  isHorizon,
+  PolylineEditor,
+}
+
 const editor = new PolylineEditor({
   color: '#ff9999',
 });
@@ -103,8 +117,8 @@ app.tree.add(element);
 
 | 方法 | 参数 | 说明 |
 | -- | -- | -- |
-| setStart | point：内部坐标系坐标 | 设置正交折线起点，保证点位不重复 |
-| setEnd | point：内部坐标系坐标 | 设置正交折线终点，保证点位不重复 |
+| setStart | point：IPointData（内部坐标系坐标） | 设置正交折线起点，保证点位不重复 |
+| setEnd | point：IPointData（内部坐标系坐标） | 设置正交折线终点，保证点位不重复 |
 
 #### 示例
 

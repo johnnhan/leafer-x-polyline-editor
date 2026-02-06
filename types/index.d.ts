@@ -73,8 +73,9 @@ declare class PolylineEditor extends Group implements IPolylineEditor {
     cancel(): void;
 }
 
+declare function isFreeLine(points: IPointData[]): boolean;
 declare function isOrthoLine(points: IPointData[]): boolean;
 declare function isHorizon(point1: IPointData, point2: IPointData): boolean;
 declare function isVertical(point1: IPointData, point2: IPointData): boolean;
 
-export { FreePolyline, OrthoPolyline, PolylineEditor, isHorizon, isOrthoLine, isVertical };
+export { FreePolyline, OrthoPolyline, PolylineEditor, isFreeLine, isHorizon, isOrthoLine, isVertical };

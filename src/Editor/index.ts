@@ -423,7 +423,7 @@ export class PolylineEditor extends Group implements IPolylineEditor {
       this.drawEditor();
     }
 
-    this.emit('line-select', {
+    this.emit('select', {
       oldValue,
       value: this.selectItem,
     });
@@ -436,7 +436,7 @@ export class PolylineEditor extends Group implements IPolylineEditor {
    */
   public cancel () {
     this.clearEditor();
-    this.emit('line-select', {
+    this.emit('select', {
       oldValue: this.selectItem,
       value: null,
     });
