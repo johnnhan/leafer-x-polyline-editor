@@ -50,7 +50,7 @@ npm install leafer-x-polyline-editor
 import {
   isHorizon,
   PolylineEditor,
-}
+} from 'leafer-x-polyline-editor';
 
 const editor = new PolylineEditor({
   color: '#ff9999',
