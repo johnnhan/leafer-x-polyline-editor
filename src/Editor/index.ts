@@ -293,7 +293,7 @@ export class PolylineEditor extends Group implements IPolylineEditor {
       spaced: null,
     };
 
-    ellipse.on(DragEvent.START, (e: IDragEvent) => {
+    ellipse.on(DragEvent.START, () => {
       this.hideEllipses();
       this.emit('drag-start', { 
         target: this.selectItem,
@@ -301,7 +301,7 @@ export class PolylineEditor extends Group implements IPolylineEditor {
       });
     });
 
-    ellipse.on(DragEvent.DRAG, (e: IDragEvent) => {
+    ellipse.on(DragEvent.DRAG, () => {
       const { x, y } = ellipse;
       const point = { x, y };
 
@@ -317,7 +317,7 @@ export class PolylineEditor extends Group implements IPolylineEditor {
       });
     });
 
-    ellipse.on(DragEvent.END, (e: IDragEvent) => {
+    ellipse.on(DragEvent.END, () => {
       ellipse.off(DragEvent.DRAG);
       ellipse.off(DragEvent.END);
       this.redrawEditor();
@@ -344,7 +344,7 @@ export class PolylineEditor extends Group implements IPolylineEditor {
       next: null,
     };
 
-    ellipse.on(DragEvent.START, (e: IDragEvent) => {
+    ellipse.on(DragEvent.START, () => {
       this.hideEllipses();
       this.emit('drag-start', { 
         target: this.selectItem,
@@ -352,7 +352,7 @@ export class PolylineEditor extends Group implements IPolylineEditor {
       });
     });
 
-    ellipse.on(DragEvent.DRAG, (e: IDragEvent) => {
+    ellipse.on(DragEvent.DRAG, () => {
       const { x, y } = ellipse;
       const point = { x, y };
 
@@ -368,7 +368,7 @@ export class PolylineEditor extends Group implements IPolylineEditor {
       });
     });
 
-    ellipse.on(DragEvent.END, (e: IDragEvent) => {
+    ellipse.on(DragEvent.END, () => {
       ellipse.off(DragEvent.DRAG);
       ellipse.off(DragEvent.END);
       this.redrawEditor();
