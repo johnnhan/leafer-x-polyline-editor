@@ -867,14 +867,14 @@ this.LeaferX.PolylineEditor = (function (exports, arrow, core) {
                 side: null,
                 spaced: null,
             };
-            ellipse.on(core.DragEvent.START, (e) => {
+            ellipse.on(core.DragEvent.START, () => {
                 this.hideEllipses();
                 this.emit('drag-start', {
                     target: this.selectItem,
                     current: ellipse,
                 });
             });
-            ellipse.on(core.DragEvent.DRAG, (e) => {
+            ellipse.on(core.DragEvent.DRAG, () => {
                 const { x, y } = ellipse;
                 const point = { x, y };
                 if (tag === 'OrthoPolyline') {
@@ -888,7 +888,7 @@ this.LeaferX.PolylineEditor = (function (exports, arrow, core) {
                     current: ellipse,
                 });
             });
-            ellipse.on(core.DragEvent.END, (e) => {
+            ellipse.on(core.DragEvent.END, () => {
                 ellipse.off(core.DragEvent.DRAG);
                 ellipse.off(core.DragEvent.END);
                 this.redrawEditor();
@@ -907,14 +907,14 @@ this.LeaferX.PolylineEditor = (function (exports, arrow, core) {
                 pre: null,
                 next: null,
             };
-            ellipse.on(core.DragEvent.START, (e) => {
+            ellipse.on(core.DragEvent.START, () => {
                 this.hideEllipses();
                 this.emit('drag-start', {
                     target: this.selectItem,
                     current: ellipse,
                 });
             });
-            ellipse.on(core.DragEvent.DRAG, (e) => {
+            ellipse.on(core.DragEvent.DRAG, () => {
                 const { x, y } = ellipse;
                 const point = { x, y };
                 if (tag === 'OrthoPolyline') {
@@ -928,7 +928,7 @@ this.LeaferX.PolylineEditor = (function (exports, arrow, core) {
                     current: ellipse,
                 });
             });
-            ellipse.on(core.DragEvent.END, (e) => {
+            ellipse.on(core.DragEvent.END, () => {
                 ellipse.off(core.DragEvent.DRAG);
                 ellipse.off(core.DragEvent.END);
                 this.redrawEditor();

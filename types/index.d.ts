@@ -1,5 +1,5 @@
 import { Arrow } from '@leafer-in/arrow';
-import { IArrow, IArrowInputData, IArrowData, IStrokeCap, IStrokeJoin, IArrowType, IEditorConfig, IPointData, IGroup, IGroupData } from '@leafer-ui/interface';
+import { IArrow, IArrowData, IArrowInputData, IStrokeCap, IStrokeJoin, IArrowType, IEditorConfig, IPointData, IGroup, IGroupData } from '@leafer-ui/interface';
 import { Group } from '@leafer-ui/core';
 
 interface IPolyline extends IArrow {

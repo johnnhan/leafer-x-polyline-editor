@@ -34,7 +34,6 @@ import {
 import type { 
   ILine,
   IPointData,
-  IDragEvent,
   IPointerEvent,
 } from '@leafer-ui/interface';
 import type {

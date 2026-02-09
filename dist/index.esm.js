@@ -866,14 +866,14 @@ class PolylineEditor extends Group {
             side: null,
             spaced: null,
         };
-        ellipse.on(DragEvent.START, (e) => {
+        ellipse.on(DragEvent.START, () => {
             this.hideEllipses();
             this.emit('drag-start', {
                 target: this.selectItem,
                 current: ellipse,
             });
         });
-        ellipse.on(DragEvent.DRAG, (e) => {
+        ellipse.on(DragEvent.DRAG, () => {
             const { x, y } = ellipse;
             const point = { x, y };
             if (tag === 'OrthoPolyline') {
@@ -887,7 +887,7 @@ class PolylineEditor extends Group {
                 current: ellipse,
             });
         });
-        ellipse.on(DragEvent.END, (e) => {
+        ellipse.on(DragEvent.END, () => {
             ellipse.off(DragEvent.DRAG);
             ellipse.off(DragEvent.END);
             this.redrawEditor();
@@ -906,14 +906,14 @@ class PolylineEditor extends Group {
             pre: null,
             next: null,
         };
-        ellipse.on(DragEvent.START, (e) => {
+        ellipse.on(DragEvent.START, () => {
             this.hideEllipses();
             this.emit('drag-start', {
                 target: this.selectItem,
                 current: ellipse,
             });
         });
-        ellipse.on(DragEvent.DRAG, (e) => {
+        ellipse.on(DragEvent.DRAG, () => {
             const { x, y } = ellipse;
             const point = { x, y };
             if (tag === 'OrthoPolyline') {
@@ -927,7 +927,7 @@ class PolylineEditor extends Group {
                 current: ellipse,
             });
         });
-        ellipse.on(DragEvent.END, (e) => {
+        ellipse.on(DragEvent.END, () => {
             ellipse.off(DragEvent.DRAG);
             ellipse.off(DragEvent.END);
             this.redrawEditor();
